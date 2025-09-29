@@ -1,8 +1,6 @@
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
 using Microsoft.EntityFrameworkCore;
 using Planne.UI.Data;
-using System;
+using Planne.UI.Config;
 
 namespace Planne.UI
 {
@@ -19,6 +17,7 @@ namespace Planne.UI
             {
                 options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
             });
+            builder.Services.ResolveDependency();
 
             var app = builder.Build();
 
