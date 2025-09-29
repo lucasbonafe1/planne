@@ -1,0 +1,10 @@
+﻿﻿.board {
+    padding: 1rem;
+    background: var(--bs-gray);
+    border-radius: 10px;
+}
+
+.columns {
+    display: flex;
+    gap: 1rem;
+}
