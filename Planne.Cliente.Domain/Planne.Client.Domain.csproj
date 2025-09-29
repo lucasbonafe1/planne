@@ -10,4 +10,8 @@
     <ProjectReference Include="..\Planne.Core\Planne.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
+
 </Project>
