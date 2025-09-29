@@ -1,0 +1,30 @@
+﻿@using Planne.Core.Entities
+
+<div class="board">
+    <h2>@Board.Name</h2>
+
+    <div class="columns">
+        @if (Board.Columns.Count() != 0)
+        {
+            @foreach (var column in Board.Columns)
+            {
+                <ColumnComponent Column="column" />
+            }
+        }
+        else
+        {
+            <AddButtonComponent/>
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public int BoardId { get; set; }
+    public Board Board { get; set; } = null!;
+
+    public async override Task OnParametersSetAsync()
+    {
+        //Board = await GetBoardById(BoardId);
+    }
+}

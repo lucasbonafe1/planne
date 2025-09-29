@@ -1,0 +1,22 @@
+@using Planne.Core.Entities
+@using Planne.Core.Helpers
+
+<div class="task-card">
+    <div class="header-task">
+        <h3>@TaskCard.Name</h3>
+    </div>
+    <div class="body-task">
+        @if (TaskCard.EndDate != null)
+        {
+            <span class="task-date">@TaskCard.EndDate?.ToString("dd/MM/yyyy")</span>
+        }
+        <span class="task-priority @TaskCard.Priority.ToString().ToLower()">
+            @TaskCard.Priority.GetEnumDescription()
+        </span>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public TaskCard TaskCard { get; set; } = null!;
+}
