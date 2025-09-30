@@ -1,10 +1,15 @@
 ﻿﻿.board {
     padding: 1rem;
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--bs-white);
     background: var(--bs-gray);
     border-radius: 10px;
 }
 
 .columns {
     display: flex;
+    overflow-x: auto;
     gap: 1rem;
 }
+

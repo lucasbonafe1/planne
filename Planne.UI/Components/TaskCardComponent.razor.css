@@ -2,16 +2,17 @@
     background-color: var(--bs-white);
     border-radius: 8px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    max-width: 100%;
     padding: 0.75rem;
-    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
     cursor: pointer;
     transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-    .task-card:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
+.task-card:hover {
+    transform: translateY(-0.5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
 
 .header-task h3 {
     font-size: 1rem;
@@ -28,19 +29,19 @@
     gap: 0.25rem;
 }
 
-    .body-task .task-date {
-        font-size: 0.8rem;
-        color: var(--bs-dark);
-    }
+.body-task .task-date {
+    font-size: 0.8rem;
+    color: var(--bs-dark);
+}
 
-    .body-task .task-priority {
-        display: inline-block;
-        padding: 0.2rem 0.5rem;
-        border-radius: 6px;
-        font-size: 0.75rem;
-        font-weight: 500;
-        color: var(--bs-white);
-    }
+.body-task .task-priority {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--bs-white);
+}
 
 .task-priority.high {
     background-color: var(--bs-danger);

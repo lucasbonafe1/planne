@@ -21,10 +21,38 @@
 @code {
     [Parameter]
     public int BoardId { get; set; }
+    public List<Column> ColumnsList { get; set; } = new List<Column>();
     public Board Board { get; set; } = null!;
 
-    // public async override Task OnParametersSetAsync()
-    // {
-    //     Board = await GetBoardById(BoardId);
-    // }
+    protected override void OnInitialized()
+    {
+        var taskCards = new List<TaskCard>();
+        var taskCard = new TaskCard { Name = "Organizar rotina escolar", Priority = Core.Enums.PriorityEnum.High, EndDate = DateTime.Now.AddDays(5)};
+
+        taskCards.Add(taskCard);
+        taskCards.Add(taskCard);
+        taskCards.Add(taskCard);
+        taskCards.Add(taskCard);
+        taskCards.Add(taskCard);
+        taskCards.Add(taskCard);
+        taskCards.Add(taskCard);
+        taskCards.Add(taskCard);
+        taskCards.Add(taskCard);
+        taskCards.Add(taskCard);
+        taskCards.Add(taskCard);
+        taskCards.Add(taskCard);
+
+        ColumnsList.Add(new Column { Name = "To Do" , TaskCards = taskCards});
+        ColumnsList.Add(new Column { Name = "Doing"});
+        ColumnsList.Add(new Column { Name = "Done" });
+        ColumnsList.Add(new Column { Name = "Do" });
+        ColumnsList.Add(new Column { Name = "Did" });
+
+        Board = new Board
+        {
+            Id = 1,
+            Name = "Estudos",
+            Columns = ColumnsList
+        };
+    }
 }

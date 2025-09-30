@@ -1,27 +1,52 @@
-﻿﻿.header-column {
+﻿.body-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; 
+}
+
+.taskcards-column {
+    flex: 1;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    overflow-y: auto;
+    max-width: 40%;
+    max-height: 50%;
+}
+
+.header-column {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: var(--bs-light);
-    border-radius: 6px 6px 0 0;
-    padding: 0.5rem 0.75rem;
+    padding: 0.75rem 1rem;
     border-bottom: 1px solid var(--bs-secondary);
 }
 
-.header-column h3 {
-    font-size: 1rem;
-    font-weight: 600;
+    .header-column h3 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin: 0;
+        color: var(--bs-dark);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+.taskcards-column ol {
+    list-style: none;
     margin: 0;
-    color: var(--bs-dark);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; 
 }
 
-.body-column {
-    flex: 1;
-    background: white;
-    padding: 0.5rem;
-    border-radius: 8px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+.add-button-wrapper {
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 1rem; 
 }

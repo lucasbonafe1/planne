@@ -1,5 +1,4 @@
 ﻿using Planne.Client.Domain.Services.Interfaces;
-using System.ComponentModel.Design;
 
 namespace Planne.UI.Config;
 

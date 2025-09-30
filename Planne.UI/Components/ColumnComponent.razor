@@ -1,23 +1,18 @@
 @using Planne.Core.Entities
 
-<div class="header-column">
-    <h3>@Column.Name</h3>
-</div>
-
-<div class="body-column">
-        @if (Column.TaskCards.Count() != 0)
+<div class="taskcards-column">
+    <div class="header-column">
+        <h3>@Column.Name</h3>
+    </div>
+    <ol>
+        @foreach (var task in Column.TaskCards)
         {
-            <ol>
-                @foreach (var task in Column.TaskCards)
-                {
-                    <TaskCardComponent TaskCard="task" />
-                }
-            </ol>
+            <TaskCardComponent TaskCard="task" />
         }
-        else
-        {
-            <AddButtonComponent/>
-        }
+    </ol>
+    <div class="add-button-wrapper">
+        <AddButtonComponent />
+    </div>
 </div>
 
 @code {
